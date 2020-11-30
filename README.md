@@ -37,7 +37,7 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
-SELECT * from customers
+SELECT * FROM customers
 WHERE city = 'London';
 ```
 
@@ -49,7 +49,7 @@ WHERE city = 'London';
   </details>
 
 ```SQL
-SELECT * from customers
+SELECT * FROM customers
 WHERE postal_code = '1010';
 ```
 
@@ -61,7 +61,7 @@ WHERE postal_code = '1010';
   </details>
 
 ```SQL
-SELECT phone from suppliers
+SELECT phone FROM suppliers
 WHERE supplier_id = '11';
 ```
 
@@ -73,11 +73,11 @@ WHERE supplier_id = '11';
   </details>
 
 ```SQL
-SELECT * from orders
+SELECT * FROM orders
 ORDER BY order_date DESC;
 ```
 
-* [ ] ***find all suppliers who have names longer than 20 characters. Returns 11 records***
+* [x] ***find all suppliers who have names longer than 20 characters. Returns 11 records***
 
   <details><summary>hint</summary>
 
@@ -86,7 +86,8 @@ ORDER BY order_date DESC;
   </details>
 
 ```SQL
-
+SELECT * FROM suppliers
+WHERE length(company_name) > '20';
 ```
 
 * [ ] ***find all customers that include the word 'MARKET' in the contact title. Should return 19 records***
