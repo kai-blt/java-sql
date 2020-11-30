@@ -65,7 +65,7 @@ SELECT phone from suppliers
 WHERE supplier_id = '11';
 ```
 
-* [ ] ***list orders descending by the order date. The order with date 1998-05-06 should be at the top***
+* [x] ***list orders descending by the order date. The order with date 1998-05-06 should be at the top***
 
   <details><summary>hint</summary>
 
@@ -73,7 +73,8 @@ WHERE supplier_id = '11';
   </details>
 
 ```SQL
-
+SELECT * from orders
+ORDER BY order_date DESC;
 ```
 
 * [ ] ***find all suppliers who have names longer than 20 characters. Returns 11 records***
