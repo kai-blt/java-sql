@@ -168,7 +168,7 @@ GROUP BY c.contact_name
 ORDER BY total_orders DESC
 ```
 
-* [ ] ***list orders grouped by customer's city showing the number of orders per city. Returns 69 Records with _Aachen_ showing 6 orders and _Albuquerque_ showing 18 orders***
+* [x] ***list orders grouped by customer's city showing the number of orders per city. Returns 69 Records with _Aachen_ showing 6 orders and _Albuquerque_ showing 18 orders***
 
   <details><summary>hint</summary>
 
@@ -176,7 +176,12 @@ ORDER BY total_orders DESC
   </details>
 
 ```SQL
-
+SELECT c.city, count(*) total_orders
+FROM orders o
+INNER JOIN customers c
+ON o.customer_id = c.customer_id
+GROUP BY c.city
+ORDER BY c.city
 ```
 
 ## Data Normalization
