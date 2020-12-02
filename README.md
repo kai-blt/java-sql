@@ -145,8 +145,7 @@ WHERE customer_id = 'SHIRE';
 
 ```SQL
 SELECT c.company_name, count(*) total
-FROM orders o
-INNER JOIN customers c
+FROM orders o JOIN customers c
 ON o.customer_id = c.customer_id
 GROUP BY c.company_name
 ORDER BY c.company_name
@@ -161,8 +160,7 @@ ORDER BY c.company_name
 
 ```SQL
 SELECT c.contact_name, count(*) total_orders
-FROM orders o
-INNER JOIN customers c
+FROM orders o JOIN customers c
 ON o.customer_id = c.customer_id
 GROUP BY c.contact_name
 ORDER BY total_orders DESC
@@ -177,8 +175,7 @@ ORDER BY total_orders DESC
 
 ```SQL
 SELECT c.city, count(*) total_orders
-FROM orders o
-INNER JOIN customers c
+FROM orders o JOIN customers c
 ON o.customer_id = c.customer_id
 GROUP BY c.city
 ORDER BY c.city
