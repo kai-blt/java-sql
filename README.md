@@ -212,6 +212,7 @@ Table Name: people
 Table Name: pets
 
 | pet_id     | pet_name   | pet_type_id| person_id  |
+|------------|------------|------------|------------|
 | 1          | Ellie      |     1      |     1      |
 | 2          | Joe        |     2      |     2      |
 | 3          | Ginger     |     1      |     3      |
